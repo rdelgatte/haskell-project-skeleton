@@ -1,27 +1,25 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.2.
+-- This file has been generated from package.yaml by hpack version 0.31.2.
 --
 -- see: https://github.com/sol/hpack
+--
+-- hash: 3670c4b27458fd184d177bf74e04ef7939a1abf6d94c999faca3a92b19f9146c
 
 name:           haskell-project-skeleton
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/haskell-project-skeleton#readme>
-homepage:       https://github.com/githubuser/haskell-project-skeleton#readme
-bug-reports:    https://github.com/githubuser/haskell-project-skeleton/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2020 Author name here
+description:    Please see the README on GitHub at <https://github.com/rdelgatte/haskell-project-skeleton#readme>
+homepage:       https://github.com/rdelgatte/haskell-project-skeleton#readme
+bug-reports:    https://github.com/rdelgatte/haskell-project-skeleton/issues
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
-    ChangeLog.md
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/haskell-project-skeleton
+  location: https://github.com/rdelgatte/haskell-project-skeleton
 
 library
   exposed-modules:
@@ -31,7 +29,7 @@ library
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      base
   default-language: Haskell2010
 
 executable haskell-project-skeleton-exe
@@ -42,7 +40,7 @@ executable haskell-project-skeleton-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      base
     , haskell-project-skeleton
   default-language: Haskell2010
 
@@ -50,11 +48,16 @@ test-suite haskell-project-skeleton-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      LibSpec
       Paths_haskell_project_skeleton
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      HUnit
+    , base
     , haskell-project-skeleton
+    , tasty
+    , tasty-discover
+    , tasty-hunit
   default-language: Haskell2010

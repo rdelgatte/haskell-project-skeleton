@@ -9,3 +9,7 @@ Basic haskell project skeleton which provides:
 - `hpc` haskell package (code coverage)
 - `profiteur` and `profiterole` haskell package (performance analysis)
 - `haskell-debug-adapter` haskell package (java-like debugger)
+
+## VSCode configuration
+
+Configure `nix/default.nix` as Nix Env selector.
